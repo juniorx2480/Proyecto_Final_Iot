@@ -1,0 +1,83 @@
+
+Tema: sensor/luz, Mensaje: ola
+Tema: sensor/luz, Mensaje: Modulo B conectado correctamente
+Tema: sensor/luz, Mensaje: Modulo A conectado correctamente
+Tema: sensor/luz, Mensaje: Modulo A conectado correctamente
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz baja, encender led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: No se detecta movimiento, apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Modulo B conectado correctamente
+Tema: sensor/luz, Mensaje: Modulo A conectado correctamente
+Tema: sensor/luz, Mensaje: Modulo A conectado correctamente
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz baja, encender led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: No se detecta movimiento, apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: hola
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
+Tema: sensor/luz, Mensaje: Se detecto movimiento, luz suficiente , apagar led
