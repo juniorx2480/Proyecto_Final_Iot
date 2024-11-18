@@ -1,0 +1,135 @@
+#include <ESP8266WiFi.h> //modulo B
+#include <PubSubClient.h>
+#include <WiFiClientSecure.h>
+#include <UniversalTelegramBot.h>
+#include <ArduinoJson.h>
+
+// Configuración WiFi
+const char* ssid = "FAMILIA RODRÍGUEZ 2.4"; // Nombre de tu red WiFi
+const char* password = "Diana8a37";         // Contraseña de tu red WiFi
+
+// Configuración del Broker MQTT
+const char* mqtt_server = "192.168.0.19";   // Dirección IP del broker Mosquitto
+const int mqtt_port = 1883;                 // Puerto del broker MQTT (1883 por defecto)
+
+// Configuración del Cliente MQTT
+WiFiClient espClient;
+PubSubClient client(espClient);
+
+// Tópico MQTT para recibir datos
+const char* subscribe_topic = "sensor/luz";
+
+// Pines del LED
+#define LED_PIN 13 // D7 en NodeMCU (GPIO13)
+
+// Configuración del bot de Telegram
+#define BOT_TOKEN "7934273322:AAGoTOxFRo5pjPP-bSnq2cbWYwTMUQ-WeKU" // Token de tu bot de Telegram
+#define CHAT_ID "5403384245" // Tu Chat ID
+
+WiFiClientSecure telegramClient;
+UniversalTelegramBot bot(BOT_TOKEN, telegramClient);
+
+// Temporizador
+unsigned long lastMotionTime = 0;
+const unsigned long motionTimeout = 60000; // 1 minuto (en milisegundos)
+
+// Función que se ejecuta cuando llega un mensaje al tópico suscrito
+void callback(char* topic, byte* payload, unsigned int length) {
+  Serial.print("Mensaje recibido en el tópico [");
+  Serial.print(topic);
+  Serial.print("]: ");
+
+  String message;
+  for (int i = 0; i < length; i++) {
+    message += (char)payload[i];
+  }
+  Serial.println(message);
+
+  // Actualizar el temporizador con la última detección de movimiento
+  lastMotionTime = millis();
+
+  // Control del LED según el mensaje recibido
+  if (message == "Se detecto movimiento, luz baja, encender led") {
+    digitalWrite(LED_PIN, HIGH); // Enciende el LED
+    bot.sendMessage(CHAT_ID, "Se detectó movimiento: Luz baja, encender LED", "");
+  } else if (message == "Se detecto movimiento, luz suficiente , apagar led") {
+    digitalWrite(LED_PIN, LOW); // Apaga el LED
+    bot.sendMessage(CHAT_ID, "Se detectó movimiento: Luz suficiente, apagar LED", "");
+  }
+}
+
+void setup_wifi() {
+  delay(10);
+  Serial.println("Conectando a WiFi...");
+  WiFi.begin(ssid, password);
+
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(1000);
+    Serial.print(".");
+  }
+
+  Serial.println("\nWiFi conectado.");
+  Serial.print("Dirección IP: ");
+  Serial.println(WiFi.localIP());
+}
+
+void reconnect() {
+  while (!client.connected()) {
+    Serial.print("Conectando al broker MQTT...");
+    if (client.connect("ModuloB")) { // Identificación del cliente MQTT
+      Serial.println("Conectado.");
+      
+      // Suscribirse al tópico
+      client.subscribe(subscribe_topic);
+      Serial.print("Suscrito al tópico: ");
+      Serial.println(subscribe_topic);
+
+      // Enviar mensaje al tópico indicando que se conectó correctamente
+      const char* message = "Modulo B conectado correctamente";
+      client.publish(subscribe_topic, message); // Publica en el tópico
+      Serial.println(message); // Muestra el mensaje en la consola
+    } else {
+      Serial.print("Error al conectar (código: ");
+      Serial.print(client.state());
+      Serial.println("). Intentando de nuevo en 5 segundos...");
+      delay(5000);
+    }
+  }
+}
+
+void checkMotionTimeout() {
+  // Verificar si ha pasado un minuto desde la última detección de movimiento
+  if (millis() - lastMotionTime > motionTimeout) {
+    digitalWrite(LED_PIN, LOW); // Apaga el LED
+    const char* timeoutMessage = "No se detecta movimiento, apagar led";
+    Serial.println(timeoutMessage);
+    client.publish(subscribe_topic, timeoutMessage); // Publica en el tópico
+    bot.sendMessage(CHAT_ID, timeoutMessage, "");
+    // Reiniciar el temporizador para evitar múltiples mensajes
+    lastMotionTime = millis();
+  }
+}
+
+void setup() {
+  Serial.begin(115200);
+  pinMode(LED_PIN, OUTPUT);
+  digitalWrite(LED_PIN, LOW); // Asegúrate de que el LED inicie apagado
+
+  setup_wifi();
+  client.setServer(mqtt_server, mqtt_port);
+  client.setCallback(callback);
+
+  // Configuración del cliente de Telegram
+  telegramClient.setInsecure(); // Configuración básica para HTTPS
+
+  // Inicializar el temporizador
+  lastMotionTime = millis();
+}
+
+void loop() {
+  if (!client.connected()) {
+    reconnect();
+  }
+  client.loop();
+  checkMotionTimeout(); // Verifica si ha pasado un minuto sin movimiento
+}
